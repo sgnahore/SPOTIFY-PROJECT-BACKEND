@@ -71,8 +71,8 @@ app.get("/login", (req, res) => {
 });
 
 app.get("/callback", (req, res) => {
-    const code: string = req.query.code;
-    const redirect_uri: string = "http://localhost:3000/playlist"; // Set your redirect URI
+    const code = req.query.code;
+    const redirect_uri = "http://localhost:3000/playlist"; // Set your redirect URI
 
     const authOptions: SpotifyAuthOptions = {
         url: "https://accounts.spotify.com/api/token",
